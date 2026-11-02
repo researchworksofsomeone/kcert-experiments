@@ -1,0 +1,34 @@
+[
+ {
+  "inputs": 2000,
+  "models": 40,
+  "facts": 12,
+  "legal_combinations": 13,
+  "brackets_s": 0.039,
+  "pairwise_certificate_s": 0.177
+ },
+ {
+  "inputs": 10000,
+  "models": 40,
+  "facts": 12,
+  "legal_combinations": 13,
+  "brackets_s": 0.191,
+  "pairwise_certificate_s": 0.935
+ },
+ {
+  "inputs": 2000,
+  "models": 90,
+  "facts": 20,
+  "legal_combinations": 64,
+  "brackets_s": 0.415,
+  "pairwise_certificate_s": 2.817
+ },
+ {
+  "inputs": 50000,
+  "models": 40,
+  "facts": 12,
+  "legal_combinations": 13,
+  "brackets_s": 1.077,
+  "pairwise_certificate_s": 8.795
+ }
+]

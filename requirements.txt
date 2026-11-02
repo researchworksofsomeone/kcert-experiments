@@ -1,0 +1,15 @@
+marimo>=0.9
+kcert>=0.2
+numpy
+scipy
+scikit-learn
+torch
+transformers
+open_clip_torch
+pandas
+pyarrow
+pillow
+matplotlib
+psutil
+huggingface_hub
+gdown

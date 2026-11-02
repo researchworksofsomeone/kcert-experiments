@@ -1,0 +1,34 @@
+Revision 1 outputs (notebook cells 27 and 28, molab, 2026-11-02)
+
+== Cell 28: equal-budget controls on MNIST-EvenOdd (10 encoders x 3 seeds = 30 heads per condition)
+training sets: base 4000, +400 extra pairs for every other condition
+deterministic maps left (Theorem 8): base 36, repair_0+1 1, nonrepair_0+5 6, nonrepair_0+2 6, more_support 36
+
+condition       maps  heads  digit err (mean +- 95%)  task acc ID  shortcut share  map purity  shortcut heads with a support-consistent non-identity map
+base              36     30  0.499 +- 0.092        0.868        0.87            0.941       11 of 26
+repair_0+1         1     30  0.087 +- 0.046        0.932        0.20            0.967       0 of 6
+nonrepair_0+5      6     30  0.595 +- 0.106        0.852        0.90            0.926       11 of 27
+nonrepair_0+2      6     30  0.192 +- 0.091        0.889        0.33            0.949       1 of 10
+more_support      36     30  0.485 +- 0.082        0.852        0.87            0.935       10 of 26
+
+== Cell 27: KSE vs random labelling, 20 paired draws
+label budget | random: mean +- 95% CI | KSE: mean +- 95% CI | KSE-random: mean +- CI | KSE better / tie / worse
+CUB birds
+  m=10   0.03295 +- 0.00235 | 0.01814 +- 0.00116 | -0.01481 +- 0.00297 | 1.00 / 0.00 / 0.00
+  m=25   0.02013 +- 0.00168 | 0.01315 +- 0.00097 | -0.00698 +- 0.00206 | 0.95 / 0.00 / 0.05
+  m=50   0.01423 +- 0.00093 | 0.01000 +- 0.00058 | -0.00423 +- 0.00116 | 0.95 / 0.00 / 0.05
+  m=100  0.01123 +- 0.00077 | 0.00802 +- 0.00041 | -0.00321 +- 0.00089 | 0.95 / 0.00 / 0.05
+  m=200  0.00805 +- 0.00038 | 0.00601 +- 0.00037 | -0.00204 +- 0.00056 | 1.00 / 0.00 / 0.00
+GTSRB signs
+  m=10   0.00395 +- 0.00109 | 0.00053 +- 0.00024 | -0.00342 +- 0.00106 | 1.00 / 0.00 / 0.00
+  m=25   0.00399 +- 0.00133 | 0.00045 +- 0.00012 | -0.00354 +- 0.00131 | 0.85 / 0.05 / 0.10
+  m=50   0.00171 +- 0.00088 | 0.00018 +- 0.00013 | -0.00153 +- 0.00091 | 0.85 / 0.15 / 0.00
+  m=100  0.00106 +- 0.00052 | 0.00021 +- 0.00014 | -0.00085 +- 0.00052 | 0.70 / 0.20 / 0.10
+MNIST-Add
+  m=10   0.09566 +- 0.03929 | 0.02298 +- 0.00865 | -0.07267 +- 0.03780 | 0.85 / 0.10 / 0.05
+  m=25   0.01901 +- 0.00652 | 0.01230 +- 0.00444 | -0.00670 +- 0.00766 | 0.55 / 0.10 / 0.35
+  m=50   0.02231 +- 0.00910 | 0.00786 +- 0.00410 | -0.01445 +- 0.01080 | 0.65 / 0.10 / 0.25
+  m=100  0.01054 +- 0.00735 | 0.00286 +- 0.00236 | -0.00768 +- 0.00790 | 0.45 / 0.35 / 0.20
+  m=200  0.00820 +- 0.00519 | 0.00172 +- 0.00162 | -0.00648 +- 0.00447 | 0.45 / 0.50 / 0.05
+BDD-OIA
+  m=10..100  0 regret for both at every budget (all probes identical; see paper Section 7.3)
